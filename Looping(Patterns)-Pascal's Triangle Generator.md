@@ -27,9 +27,19 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
 ---
 
 ## 🧪 Program
-Add Code Here
-
+```
+import math
+def binomial_coefficient(n, k):
+    return math.factorial(n) // (math.factorial(k) * math.factorial(n - k))
+rows = int(input("Enter the number of rows: "))
+for i in range(rows):
+    print(" " * (rows - i), end="")
+        for j in range(i + 1):
+        print(binomial_coefficient(i, j), end=" ")
+    print()  
+```
 ## Sample Output
+![image](https://github.com/user-attachments/assets/be8c610a-a1d7-4519-88d0-ec285e72f316)
 
 ## Result
-
+The program correctly generates Pascal's Triangle without using the math module, and displays the output as intended.
